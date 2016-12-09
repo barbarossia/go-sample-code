@@ -62,7 +62,7 @@ func InnerType(){
 	//多行字符串
 	mutilineStr := `hello
 	world`
-	fmt.Println(mutilineStr)
+	fmt.Println("multiple string:",mutilineStr)
 }
 
 //枚举定义
@@ -91,7 +91,7 @@ func ArrayDef(){
 	arr1 := [3]int{1, 2, 3} // 声明了一个长度为3的int数组
 	arr2 := [10]int{1, 2, 3} // 声明了一个长度为10的int数组，其中前三个元素初始化为1、2、3，其它默认为0
 	arr3 := [...]int{4, 5, 6} // 可以省略长度而采用`...`的方式，Go会自动根据元素个数来计算长度
-	fmt.Println(arr[0])
+	fmt.Println("1st element of arr:",arr[0])
 	fmt.Println(arr1)
 	fmt.Println(arr2)
 	fmt.Println(arr3)
@@ -99,7 +99,7 @@ func ArrayDef(){
 	doubleArray := [2][2]int{[2]int{1,2},[2]int{1,2}}
 	//简化为
 	doubleArray = [2][2]int{{1,2},{1,2}}
-	fmt.Println(doubleArray)
+	fmt.Println("2 dimension array:",doubleArray)
 }
 //slice
 //因为数组默认不能改变长度，声明数组必须要指定长度，比如[3]int和[4]int是俩种类型，在将数组作为参数传入的时候，传入的其实是副本
@@ -146,7 +146,42 @@ func SliceDef(){
 	fmt.Println(bSlice)
 	//slice是引用类型，所以当引用改变其中元素的值时，其它的所有引用都会改变该值，例如上面的aSlice和bSlice，如果修改了aSlice中元素的值，那么bSlice相对应的值也会改变。
 }
-//map
+//map，map和slice类似，只不过slice的key只能为int，而map可以是string或者其他类型
+//map是无序的，每次打印出来的map都会不一样，它不能通过index获取，而必须通过key获取
+//map的长度是不固定的，也就是和slice一样，也是一种引用类型
+//内置的len函数同样适用于map，返回map拥有的key的数量
+//map的值可以很方便的修改，通过numbers["one"]=11可以很容易的把key为one的字典值改为11
+//map和其他基本型别不同，它不是thread-safe，在多个go-routine存取时，必须使用mutex lock机制
 func MapDef(){
+	fmt.Println("***************MapDef*******************")
+	//声明一个key为string，value为int的map
+	//var numMap map[string]int
+	//另外一种声明方式
+	numMap := make(map[string]int)
+	numMap["one"] = 1
+	numMap["two"] = 2
+	fmt.Println("the value of the key 'two':",numMap["two"])
+	fmt.Println("before delete:",numMap)
+	delete(numMap,"two")
+	fmt.Println("after delete:",numMap)
+	//也可以直接初始化元素
+	strMap := map[string]string{"tom":"tom","jerry":"jerry"}
+	fmt.Println("string map:",strMap)
+	//map也是引用类型，如果俩个map指向同一个地址，一个改变另外一个也会改变
+	sMap := strMap
+	sMap["tom"] = "tom has been changed"
+	fmt.Println("strMap:",strMap)
+	fmt.Println("sMap:",strMap)
+}
+//new and make
+/*make用于内建类型（map、slice 和channel）的内存分配。new用于各种类型的内存分配。
+内建函数new本质上说跟其它语言中的同名函数功能一样：new(T)分配了零值填充的T类型的内存空间，并且返回其地址，即一个*T类型的值。用Go的术语说，它返回了一个指针，指向新分配的类型T的零值。有一点非常重要：
+new返回指针。
+内建函数make(T, args)与new(T)有着不同的功能，make只能创建slice、map和channel，并且返回一个有初始值(非零)的T类型，而不是*T。本质来讲，
+导致这三个类型有所不同的原因是指向数据结构的引用在使用前必须被初始化。例如，一个slice，是一个包含指向数据（内部array）的指针、长度和容量的三项描述符；
+在这些项目被初始化之前，slice为nil。对于slice、map和channel来说，make初始化了内部的数据结构，填充适当的值。
+make返回初始化后的（非零）值。*/
+func NewAndMake(){
+	fmt.Println("***************NewAndMake*******************")
 
 }
