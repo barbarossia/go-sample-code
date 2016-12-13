@@ -6,6 +6,8 @@ import (
     "github.com/derrick/vardef"
     "github.com/derrick/condition"
     "github.com/derrick/method"
+    "github.com/derrick/structSample"
+    "github.com/derrick/ooSample"
 )
 
 func main() {
@@ -24,4 +26,12 @@ func main() {
 
     method.DeferSample()
     method.PubFilter()
+
+    structSample.StructSample()
+
+    a4 := ooSample.Vehicle{"Audi","A4","2.0T"}
+    fmt.Println(a4.GetModelName())
+
+    ooSample.MethodExtendsSample()
+
 }
