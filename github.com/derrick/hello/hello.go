@@ -8,11 +8,12 @@ import (
     "github.com/derrick/method"
     "github.com/derrick/structSample"
     "github.com/derrick/ooSample"
+    "github.com/derrick/interfaceSample"
 )
 
 func main() {
-    fmt.Printf("hello, world\n")
-    fmt.Printf(stringutil.Reverse("!oG ,olleH"))
+    fmt.Println("hello, world\n")
+    fmt.Println(stringutil.Reverse("!oG ,olleH"))
     vardef.InnerType()
     vardef.VarDefSample()
     vardef.ArrayDef()
@@ -34,4 +35,30 @@ func main() {
 
     ooSample.MethodExtendsSample()
 
+    fmt.Println("***************interfaceSample*******************")
+
+
+    car := interfaceSample.Car{interfaceSample.PassengerCar{"Audi","A4","2.0T","轿车"}}
+    suv := interfaceSample.SUV{interfaceSample.PassengerCar{"Audi","Q5","2.0T","SUV"}}
+    sportscar := interfaceSample.SportsCar{interfaceSample.PassengerCar{"Audi","R8","4.0T","跑车"}}
+
+    car.Ignition()
+    suv.Ignition()
+    sportscar.Ignition()
+
+    /*var v interfaceSample.Vehicle
+    v = car
+    v.Ignition()
+    v = suv
+    v.Ignition()
+    v = sportscar
+    v.Ignition()*/
+
+    varray := make([]interfaceSample.Vehicle, 3)
+    varray[0],varray[1],varray[2] = car,suv,sportscar
+    for _, value := range varray{
+        value.Ignition()
+    }
+
+    interfaceSample.InstanceOf()
 }

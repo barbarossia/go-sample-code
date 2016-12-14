@@ -10,7 +10,7 @@ type Vehicle struct{
 //通过这种方式来为struct添加method，这里的ReceiverType为Vehicle，及通过在方法名前面添加ReceiverType来为对应的type添加method
 // func (r ReceiverType) funcName(parameters) (results)
 func (v Vehicle) GetModelName() string{
-	return v.Make + "-" + v.Series + "-" + v.Model
+	return "this is Vehicle's GetModelName:" + v.Make + "-" + v.Series + "-" + v.Model
 }
 //receiver也支持指针，这种情况下会改变原始的值，不传指针的话就只是一个值的copy
 //如果一个method的receiver是*T,你可以在一个T类型的实例变量V上面调用这个method，而不需要&V去调用这个method类似的
@@ -27,5 +27,10 @@ type Car struct {
 func MethodExtendsSample(){
 	fmt.Println("***************methodExtendsSample*******************")
 	car := Car{Vehicle{"Ford","蒙迪欧","2.0T"},"沪A00001"}
-	fmt.Println("Car可以直接调用Vehicle的GetModelName方法:",car.GetModelName())
+	fmt.Println(car.GetModelName()) //方法覆盖后默认为Car的方法，如果没有覆盖，则会调用Vehicle的方法
+	fmt.Println(car.Vehicle.GetModelName())
+}
+//这样就是方法重写，Car的GetModelName override了Vehicle的GetModelName方法
+func (c Car) GetModelName() string{
+	return "this is Car's GetModelName:" + c.Make + "-" + c.Series + "-" + c.Model
 }
