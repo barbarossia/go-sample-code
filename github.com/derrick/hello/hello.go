@@ -9,6 +9,7 @@ import (
     "github.com/derrick/structSample"
     "github.com/derrick/ooSample"
     "github.com/derrick/interfaceSample"
+    "github.com/derrick/reflect"
 )
 
 func main() {
@@ -61,4 +62,6 @@ func main() {
     }
 
     interfaceSample.InstanceOf()
+
+    reflect.ReflectSample()
 }

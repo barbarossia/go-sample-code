@@ -13,6 +13,11 @@ type Vehicle interface {
 	Drive()
 	Brake()
 }
+//interface也支持匿名字段，这样的话Bus中就业包含了Vehicle中的方法
+type Bus interface {
+	Vehicle
+	Boarding()
+}
 
 type PassengerCar struct{
 	Make string
