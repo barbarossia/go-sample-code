@@ -41,11 +41,11 @@ type SportsCar struct {
 func (p PassengerCar) Ignition(){
 	fmt.Printf("The %s is launched:\n",p.VehicleType)
 }
-//PassengerCar实现了Ignition()方法
+//PassengerCar实现了Drive()方法
 func (p PassengerCar) Drive(){
 	fmt.Printf("The %s is driving:\n",p.VehicleType)
 }
-//PassengerCar实现了Ignition()方法
+//PassengerCar实现了Brake()方法
 func (p PassengerCar) Brake(){
 	fmt.Printf("The %s is braking:\n",p.VehicleType)
 }

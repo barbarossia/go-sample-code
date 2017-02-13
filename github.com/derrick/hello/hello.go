@@ -10,6 +10,7 @@ import (
     "github.com/derrick/ooSample"
     "github.com/derrick/interfaceSample"
     "github.com/derrick/reflectSample"
+    "github.com/derrick/concurrentSample"
 )
 
 func main() {
@@ -64,4 +65,7 @@ func main() {
     interfaceSample.InstanceOf()
 
     reflectSample.ReflectSample()
+
+    go concurrentSample.SayHello("goroutine")
+    concurrentSample.SayHello("direct")
 }

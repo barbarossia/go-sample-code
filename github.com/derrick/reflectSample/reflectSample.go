@@ -54,5 +54,15 @@ func ReflectSample(){
 	fmt.Println("***************TypeOf*****************")
 	t := reflect.TypeOf(p)
 	fmt.Println("TypeOf:",t)
-	
+	//FieldByName的使用，必须为struct才可以使用，否则会报panics错误
+	fmt.Println("***************FieldByName*****************")
+	fByName := v.Elem().FieldByName("Make")
+	fmt.Println("FieldByName:",fByName)
+	//SetXXX，如果传入的参数不是对应的类型，否则会报panics错误
+	fmt.Println("***************SetString*****************")
+	fByName1 := v.Elem().FieldByName("Make")
+	fmt.Println("before SetString：", fByName1)
+	v.Elem().FieldByName("Make").SetString("BENZ")
+	fByName2 := v.Elem().FieldByName("Make")
+	fmt.Println("after SetString：", fByName2)
 }
