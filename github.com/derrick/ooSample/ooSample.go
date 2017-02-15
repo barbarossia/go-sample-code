@@ -1,4 +1,4 @@
-package ooSample
+package main
 
 import "fmt"
 
@@ -9,7 +9,7 @@ type Vehicle struct{
 }
 //通过这种方式来为struct添加method，这里的ReceiverType为Vehicle，及通过在方法名前面添加ReceiverType来为对应的type添加method
 // func (r ReceiverType) funcName(parameters) (results)
-func (v Vehicle) GetModelName() string{
+func (v Vehicle) getModelName() string{
 	return "this is Vehicle's GetModelName:" + v.Make + "-" + v.Series + "-" + v.Model
 }
 //receiver也支持指针，这种情况下会改变原始的值，不传指针的话就只是一个值的copy
@@ -24,13 +24,20 @@ type Car struct {
 	PlateNo string
 }
 //Car本身没有GetModelName和setModelName，在定义了Vehicle匿名字段后，也可以直接调用
-func MethodExtendsSample(){
+func methodExtendsSample(){
 	fmt.Println("***************methodExtendsSample*******************")
 	car := Car{Vehicle{"Ford","蒙迪欧","2.0T"},"沪A00001"}
-	fmt.Println(car.GetModelName()) //方法覆盖后默认为Car的方法，如果没有覆盖，则会调用Vehicle的方法
-	fmt.Println(car.Vehicle.GetModelName())
+	fmt.Println(car.getModelName()) //方法覆盖后默认为Car的方法，如果没有覆盖，则会调用Vehicle的方法
+	fmt.Println(car.Vehicle.getModelName())
 }
 //这样就是方法重写，Car的GetModelName override了Vehicle的GetModelName方法
-func (c Car) GetModelName() string{
+func (c Car) getModelName() string{
 	return "this is Car's GetModelName:" + c.Make + "-" + c.Series + "-" + c.Model
+}
+
+func main() {
+	a4 := Vehicle{"Audi","A4","2.0T"}
+	fmt.Println(a4.getModelName())
+
+	methodExtendsSample()
 }

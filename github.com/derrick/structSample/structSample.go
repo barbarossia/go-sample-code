@@ -1,4 +1,4 @@
-package structSample
+package main
 
 import "fmt"
 
@@ -17,7 +17,7 @@ type vehicleDefine struct{
 
 var V vehicle
 
-func StructSample(){
+func structSample(){
 	fmt.Println("***************StructSample*******************")
 	V.make = "Audi"
 	V.series = "Q7"
@@ -38,4 +38,8 @@ func StructSample(){
 	fmt.Println("这是一个匿名字段的struct",mainLoss)
 	fmt.Println("可以直接访问匿名字段mainLoss.make：",mainLoss.make)
 	fmt.Println("也可以通过匿名字段的名称访问mainLoss.vehicle.make:",mainLoss.vehicle.make)
+}
+
+func main(){
+	structSample()
 }

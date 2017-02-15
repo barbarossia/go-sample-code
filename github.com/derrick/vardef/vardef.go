@@ -1,4 +1,4 @@
-package vardef
+package main
 
 import(
 	"fmt"
@@ -21,7 +21,7 @@ var(
 	g2 = "g2"
 )
 
-func VarDefSample(){
+func varDefSample(){
 	fmt.Println("***************VarDefSample*******************")
 	//定义类型为string的a变量
 	var a string
@@ -41,7 +41,7 @@ func VarDefSample(){
 	fmt.Println(a,b,c,a1,d,e,d1,e1,d2,e2,_1)
 }
 
-func InnerType(){
+func innerType(){
 	fmt.Println("***************InnerType*******************")
 	//Boolean
 	b := true
@@ -67,7 +67,7 @@ func InnerType(){
 
 //枚举定义
 // iota，这个关键字用来声明enum的时候采用，它默认开始值是0，const中每增加一行加1
-func EnumDef(){
+func enumDef(){
 	fmt.Println("***************EnumDef*******************")
 	const(
 		x = iota
@@ -84,7 +84,7 @@ func EnumDef(){
 }
 //数组定义
 //数组不能改变长度
-func ArrayDef(){
+func arrayDef(){
 	fmt.Println("***************ArrayDef*******************")
 	arr := [3]int{1,2,3} //定义长度为3的int数组，并初始化值
 
@@ -107,7 +107,7 @@ func ArrayDef(){
 //slice的默认开始位置是0，ar[:n]等价于ar[0:n]
 //slice的第二个序列默认是数组的长度，ar[n:]等价于ar[n:len(ar)]
 //如果从一个数组里面直接获取slice，可以这样ar[:]，因为默认第一个序列是0，第二个是数组的长度，即等价于ar[0:len(ar)]
-func SliceDef(){
+func sliceDef(){
 	fmt.Println("***************SliceDef*******************")
 	//slice定义
 	var islice []int
@@ -152,7 +152,7 @@ func SliceDef(){
 //内置的len函数同样适用于map，返回map拥有的key的数量
 //map的值可以很方便的修改，通过numbers["one"]=11可以很容易的把key为one的字典值改为11
 //map和其他基本型别不同，它不是thread-safe，在多个go-routine存取时，必须使用mutex lock机制
-func MapDef(){
+func mapDef(){
 	fmt.Println("***************MapDef*******************")
 	//声明一个key为string，value为int的map
 	//var numMap map[string]int
@@ -181,7 +181,13 @@ new返回指针。
 导致这三个类型有所不同的原因是指向数据结构的引用在使用前必须被初始化。例如，一个slice，是一个包含指向数据（内部array）的指针、长度和容量的三项描述符；
 在这些项目被初始化之前，slice为nil。对于slice、map和channel来说，make初始化了内部的数据结构，填充适当的值。
 make返回初始化后的（非零）值。*/
-func NewAndMake(){
+func newAndMake(){
 	fmt.Println("***************NewAndMake*******************")
+}
 
+func main(){
+	innerType()
+	varDefSample()
+	arrayDef()
+	mapDef()
 }

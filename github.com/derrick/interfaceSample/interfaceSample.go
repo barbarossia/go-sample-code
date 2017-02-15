@@ -1,4 +1,4 @@
-package interfaceSample
+package main
 
 import "fmt"
 
@@ -20,6 +20,7 @@ type Bus interface {
 }
 
 type PassengerCar struct{
+	Vehicle
 	Make string
 	Series string
 	Model string
@@ -38,19 +39,19 @@ type SportsCar struct {
 	PassengerCar
 }
 //PassengerCar实现了Ignition()方法
-func (p PassengerCar) Ignition(){
+func (p PassengerCar) ignition(){
 	fmt.Printf("The %s is launched:\n",p.VehicleType)
 }
 //PassengerCar实现了Drive()方法
-func (p PassengerCar) Drive(){
+func (p PassengerCar) drive(){
 	fmt.Printf("The %s is driving:\n",p.VehicleType)
 }
-//PassengerCar实现了Brake()方法
+//PassengerCar实现了brake()方法
 func (p PassengerCar) Brake(){
 	fmt.Printf("The %s is braking:\n",p.VehicleType)
 }
 //Car重载了PassengerCar的Ignition()方法
-func (c Car) Ignition(){
+func (c Car) ignition(){
 	fmt.Println("The car is launched:",c)
 }
 
@@ -64,7 +65,7 @@ func nullInterfaceSample(inf NullInterface) NullInterface{
 	return temp;
 }
 //类型判断，interface可以存储任何值，可以通过Comma-ok断言和switch来判读类型
-func InstanceOf(){
+func instanceOf(){
 	arr := make([]NullInterface,3)
 	arr[0],arr[1],arr[2] = 1,"s",false
 	fmt.Println("***************InstanceOf*****************")
@@ -96,4 +97,33 @@ func InstanceOf(){
 
 		}
 	}
+}
+
+func main() {
+	fmt.Println("***************interfaceSample*******************")
+
+
+	car := Car{PassengerCar{"Audi","A4","2.0T","轿车"}}
+	suv := SUV{PassengerCar{"Audi","Q5","2.0T","SUV"}}
+	sportsCar := SportsCar{PassengerCar{"Audi","R8","4.0T","跑车"}}
+
+	car.ignition()
+	suv.ignition()
+	sportsCar.ignition()
+
+	/*var v interfaceSample.Vehicle
+	v = car
+	v.Ignition()
+	v = suv
+	v.Ignition()
+	v = sportscar
+	v.Ignition()*/
+
+	varray := make([]Vehicle, 3)
+	varray[0],varray[1],varray[2] = car,suv,sportsCar
+	for _, value := range varray{
+		value.Ignition()
+	}
+
+	instanceOf()
 }

@@ -1,4 +1,4 @@
-package method
+package main
 
 import (
 	"fmt"
@@ -19,13 +19,13 @@ func indefiniteQuantityArg(arg...string){
 
 }
 //传指针到函数,这样的话i就不会是一个值的copy了，i本身在func中就会被改变
-func PointerFunc(i *int) int{
+func pointerFunc(i *int) int{
 	fmt.Println("***************PointerFuc*******************")
 	*i = *i +1
 	return *i
 }
 //defer Go本身就支持defer，在return或者函数退出之前安装先进后出的顺序执行
-func DeferSample(){
+func deferSample(){
 	for i := 0; i < 5; i++ {
 		defer fmt.Printf("%d ", i)
 	}
@@ -58,11 +58,21 @@ func intFilter(sliceA []int,f testInt) []int{
 	return result
 }
 //调用intFilter
-func PubFilter(){
+func pubFilter(){
 	slice := []int {1, 2, 3, 4, 5,6, 7}
 	fmt.Println("slice = ", slice)
 	odd := intFilter(slice, isOdd)    // 函数当做值来传递了
 	fmt.Println("Odd elements of slice are: ", odd)
 	even := intFilter(slice, isEven)  // 函数当做值来传递了
 	fmt.Println("Even elements of slice are: ", even)
+}
+
+func main() {
+	i := 1
+	i1 := pointerFunc(&i)
+	fmt.Println("i + 1 = ",i1)
+	fmt.Println("i = ",i)
+
+	deferSample()
+	pubFilter()
 }

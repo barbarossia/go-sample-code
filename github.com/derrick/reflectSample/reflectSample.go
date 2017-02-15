@@ -1,4 +1,4 @@
-package reflectSample
+package main
 
 import (
 	"reflect"
@@ -12,11 +12,11 @@ type PassengerCar struct{
 	VehicleType string
 }
 
-func (p *PassengerCar) GetModelName() string{
+func (p *PassengerCar) getModelName() string{
 	return "this is PassengerCar's GetModelName:" + p.Make + "-" + p.Series + "-" + p.Model
 }
 
-func ReflectSample(){
+func reflectSample(){
 	fmt.Println("***************ValueOf*****************")
 	p := PassengerCar{"audi","a4","2.0","car"}
 	v := reflect.ValueOf(&p)
@@ -36,8 +36,8 @@ func ReflectSample(){
 
 	fmt.Println("***************Call的使用*****************")
 	//如果此处v的类型不是func，那么会报panics错误
-	result := v.MethodByName("GetModelName").Call([]reflect.Value{})
-	fmt.Println(result)
+	//result := v.MethodByName("getModelName").Call([]reflect.Value{})
+	//fmt.Println(result)
 	fmt.Println("***************Cap的使用*****************")
 	arr := [...]string{"One","Two","Three"}
 	//Cap只能供数组使用，否则会报panics错误
@@ -65,4 +65,7 @@ func ReflectSample(){
 	v.Elem().FieldByName("Make").SetString("BENZ")
 	fByName2 := v.Elem().FieldByName("Make")
 	fmt.Println("after SetString：", fByName2)
+}
+func main() {
+	reflectSample();
 }

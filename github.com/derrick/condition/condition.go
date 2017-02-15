@@ -1,8 +1,8 @@
-package condition
+package main
 
 import "fmt"
 
-func IfSample(){
+func ifSample(){
 	b := true;
 	//条件不需要括号
 	if b {
@@ -32,7 +32,7 @@ func square(i int) int{
 	return i*i;
 }
 
-func GotoSample(){
+func gotoSample(){
 	fmt.Println("***************GotoSample*******************")
 	i := 0;
 	SomePlace:
@@ -43,7 +43,7 @@ func GotoSample(){
 	}
 }
 //for可以迭代，也可以作为while使用
-func ForSample(){
+func forSample(){
 	fmt.Println("***************ForSample*******************")
 	//for expression1 变量声明，expression2 条件判断，expression3 每轮循环结束调用
 	for i:=1;i<10;i++{
@@ -71,7 +71,7 @@ func ForSample(){
 
 }
 //switch
-func SwitchSample(){
+func switchSample(){
 	fmt.Println("***************SwitchSample*******************")
 	//switch和其他语言没有什么区别，只要switch的类型一直就可以了
 	//默认在每个case后做break操作，所以不需要手工写break
@@ -90,4 +90,11 @@ func SwitchSample(){
 	default:
 		fmt.Println("default")
 	}
+}
+
+func main() {
+	ifSample()
+	gotoSample()
+	forSample()
+	switchSample()
 }
