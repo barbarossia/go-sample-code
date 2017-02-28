@@ -24,7 +24,7 @@ func pointerFunc(i *int) int{
 	*i = *i +1
 	return *i
 }
-//defer Go本身就支持defer，在return或者函数退出之前安装先进后出的顺序执行
+//Go本身就支持defer，在return或者函数退出之前安装先进后出的顺序执行
 func deferSample(){
 	for i := 0; i < 5; i++ {
 		defer fmt.Printf("%d ", i)
