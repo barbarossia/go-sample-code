@@ -1,0 +1,160 @@
+!_TAG_FILE_FORMAT	2
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Joel Stemmer	/stemmertech@gmail.com/
+!_TAG_PROGRAM_NAME	gotags
+!_TAG_PROGRAM_URL	https://github.com/jstemmer/gotags
+!_TAG_PROGRAM_VERSION	1.4.1	/go1.7.4/
+Boarding	interfaceSample\interfaceSample.go	19;"	m	access:public	language:Go	line:19	ntype:Bus	signature:()
+Brake	interfaceSample\interfaceSample.go	14;"	m	access:public	language:Go	line:14	ntype:Vehicle	signature:()
+Brake	interfaceSample\interfaceSample.go	50;"	m	access:public	ctype:PassengerCar	language:Go	line:50	signature:()
+Bus	interfaceSample\interfaceSample.go	17;"	n	access:public	language:Go	line:17	type:interface
+Car	interfaceSample\interfaceSample.go	30;"	t	access:public	language:Go	line:30	type:struct
+Car	ooSample\ooSample.go	22;"	t	access:public	language:Go	line:22	type:struct
+Drive	interfaceSample\interfaceSample.go	13;"	m	access:public	language:Go	line:13	ntype:Vehicle	signature:()
+Ignition	interfaceSample\interfaceSample.go	12;"	m	access:public	language:Go	line:12	ntype:Vehicle	signature:()
+Make	interfaceSample\interfaceSample.go	24;"	w	access:public	ctype:PassengerCar	language:Go	line:24	type:string
+Make	ooSample\ooSample.go	6;"	w	access:public	ctype:Vehicle	language:Go	line:6	type:string
+Make	reflectSample\reflectSample.go	9;"	w	access:public	ctype:PassengerCar	language:Go	line:9	type:string
+Model	interfaceSample\interfaceSample.go	26;"	w	access:public	ctype:PassengerCar	language:Go	line:26	type:string
+Model	ooSample\ooSample.go	8;"	w	access:public	ctype:Vehicle	language:Go	line:8	type:string
+Model	reflectSample\reflectSample.go	11;"	w	access:public	ctype:PassengerCar	language:Go	line:11	type:string
+Name	dbSample\dbSample.go	12;"	w	access:public	ctype:Person	language:Go	line:12	type:string
+NullInterface	interfaceSample\interfaceSample.go	7;"	n	access:public	language:Go	line:7	type:interface
+PassengerCar	interfaceSample\interfaceSample.go	22;"	t	access:public	language:Go	line:22	type:struct
+PassengerCar	interfaceSample\interfaceSample.go	31;"	e	access:public	ctype:Car	language:Go	line:31	type:PassengerCar
+PassengerCar	interfaceSample\interfaceSample.go	35;"	e	access:public	ctype:SUV	language:Go	line:35	type:PassengerCar
+PassengerCar	interfaceSample\interfaceSample.go	39;"	e	access:public	ctype:SportsCar	language:Go	line:39	type:PassengerCar
+PassengerCar	reflectSample\reflectSample.go	8;"	t	access:public	language:Go	line:8	type:struct
+Person	dbSample\dbSample.go	11;"	t	access:public	language:Go	line:11	type:struct
+Phone	dbSample\dbSample.go	13;"	w	access:public	ctype:Person	language:Go	line:13	type:string
+PlateNo	ooSample\ooSample.go	24;"	w	access:public	ctype:Car	language:Go	line:24	type:string
+Reverse	stringutil\reverse.go	5;"	f	access:public	language:Go	line:5	signature:(s string)	type:string
+SUV	interfaceSample\interfaceSample.go	34;"	t	access:public	language:Go	line:34	type:struct
+Series	interfaceSample\interfaceSample.go	25;"	w	access:public	ctype:PassengerCar	language:Go	line:25	type:string
+Series	ooSample\ooSample.go	7;"	w	access:public	ctype:Vehicle	language:Go	line:7	type:string
+Series	reflectSample\reflectSample.go	10;"	w	access:public	ctype:PassengerCar	language:Go	line:10	type:string
+SportsCar	interfaceSample\interfaceSample.go	38;"	t	access:public	language:Go	line:38	type:struct
+V	structSample\structSample.go	18;"	v	access:public	language:Go	line:18	type:vehicle
+Vehicle	interfaceSample\interfaceSample.go	11;"	n	access:public	language:Go	line:11	type:interface
+Vehicle	interfaceSample\interfaceSample.go	18;"	e	access:public	language:Go	line:18	ntype:Bus
+Vehicle	interfaceSample\interfaceSample.go	23;"	e	access:public	ctype:PassengerCar	language:Go	line:23	type:Vehicle
+Vehicle	ooSample\ooSample.go	23;"	e	access:public	ctype:Car	language:Go	line:23	type:Vehicle
+Vehicle	ooSample\ooSample.go	5;"	t	access:public	language:Go	line:5	type:struct
+VehicleType	interfaceSample\interfaceSample.go	27;"	w	access:public	ctype:PassengerCar	language:Go	line:27	type:string
+VehicleType	reflectSample\reflectSample.go	12;"	w	access:public	ctype:PassengerCar	language:Go	line:12	type:string
+arrayDef	vardef\vardef.go	86;"	f	access:private	language:Go	line:86	signature:()
+bufferedChanSample	concurrentSample\concurrentSample.go	56;"	f	access:private	language:Go	line:56	signature:()
+c1	vardef\vardef.go	16;"	c	access:private	language:Go	line:16
+c2	vardef\vardef.go	17;"	c	access:private	language:Go	line:17
+chanDirection	concurrentSample\concurrentSample.go	75;"	f	access:private	language:Go	line:75	signature:()
+chanSample	concurrentSample\concurrentSample.go	46;"	f	access:private	language:Go	line:46	signature:()
+deferSample	method\method.go	28;"	f	access:private	language:Go	line:28	signature:()
+dirSample	fileSample\fileSample.go	17;"	f	access:private	language:Go	line:17	signature:()
+drive	interfaceSample\interfaceSample.go	46;"	m	access:private	ctype:PassengerCar	language:Go	line:46	signature:()
+enumDef	vardef\vardef.go	69;"	f	access:private	language:Go	line:69	signature:()
+fileReadSample	fileSample\fileSample.go	46;"	f	access:private	language:Go	line:46	signature:()
+fileRemoveSample	fileSample\fileSample.go	64;"	f	access:private	language:Go	line:64	signature:()
+fileWriteSample	fileSample\fileSample.go	30;"	f	access:private	language:Go	line:30	signature:()
+flag	vardef\vardef.go	9;"	c	access:private	language:Go	line:9
+fmt	concurrentSample\concurrentSample.go	4;"	i	language:Go	line:4
+fmt	condition\condition.go	3;"	i	language:Go	line:3
+fmt	dbSample\dbSample.go	4;"	i	language:Go	line:4
+fmt	fileSample\fileSample.go	7;"	i	language:Go	line:7
+fmt	hello\hello.go	4;"	i	language:Go	line:4
+fmt	interfaceSample\interfaceSample.go	3;"	i	language:Go	line:3
+fmt	method\method.go	4;"	i	language:Go	line:4
+fmt	myServer\myServer.go	4;"	i	language:Go	line:4
+fmt	ooSample\ooSample.go	3;"	i	language:Go	line:3
+fmt	reflectSample\reflectSample.go	5;"	i	language:Go	line:5
+fmt	structSample\structSample.go	3;"	i	language:Go	line:3
+fmt	vardef\vardef.go	4;"	i	language:Go	line:4
+forSample	condition\condition.go	46;"	f	access:private	language:Go	line:46	signature:()
+g1	vardef\vardef.go	20;"	v	access:private	language:Go	line:20
+g2	vardef\vardef.go	21;"	v	access:private	language:Go	line:21
+getModelName	ooSample\ooSample.go	12;"	m	access:private	ctype:Vehicle	language:Go	line:12	signature:()	type:string
+getModelName	ooSample\ooSample.go	34;"	m	access:private	ctype:Car	language:Go	line:34	signature:()	type:string
+getModelName	reflectSample\reflectSample.go	15;"	m	access:private	ctype:PassengerCar	language:Go	line:15	signature:()	type:string
+github.com/derrick/stringutil	hello\hello.go	5;"	i	language:Go	line:5
+global	vardef\vardef.go	12;"	v	access:private	language:Go	line:12
+gopkg.in/mgo.v2	dbSample\dbSample.go	5;"	i	language:Go	line:5
+gopkg.in/mgo.v2/bson	dbSample\dbSample.go	6;"	i	language:Go	line:6
+gotoSample	condition\condition.go	35;"	f	access:private	language:Go	line:35	signature:()
+helloWeb	myServer\myServer.go	9;"	f	access:private	language:Go	line:9	signature:(response http.ResponseWriter, request *http.Request)
+i	vardef\vardef.go	7;"	c	access:private	language:Go	line:7
+ifSample	condition\condition.go	5;"	f	access:private	language:Go	line:5	signature:()
+ignition	interfaceSample\interfaceSample.go	42;"	m	access:private	ctype:PassengerCar	language:Go	line:42	signature:()
+ignition	interfaceSample\interfaceSample.go	54;"	m	access:private	ctype:Car	language:Go	line:54	signature:()
+indefiniteQuantityArg	method\method.go	18;"	f	access:private	language:Go	line:18	signature:(arg )
+innerType	vardef\vardef.go	43;"	f	access:private	language:Go	line:43	signature:()
+instanceOf	interfaceSample\interfaceSample.go	68;"	f	access:private	language:Go	line:68	signature:()
+intFilter	method\method.go	50;"	f	access:private	language:Go	line:50	signature:(sliceA []int, f testInt)	type:[]int
+isEven	method\method.go	42;"	f	access:private	language:Go	line:42	signature:(i int)	type:bool
+isOdd	method\method.go	35;"	f	access:private	language:Go	line:35	signature:(i int)	type:bool
+loadInfo	myServer\myServer.go	27;"	f	access:private	language:Go	line:27	signature:(response http.ResponseWriter, request *http.Request)
+log	dbSample\dbSample.go	7;"	i	language:Go	line:7
+log	myServer\myServer.go	6;"	i	language:Go	line:6
+main	concurrentSample\concurrentSample.go	18;"	f	access:private	language:Go	line:18	signature:()
+main	concurrentSample\concurrentSample.go	1;"	p	language:Go	line:1
+main	condition\condition.go	1;"	p	language:Go	line:1
+main	condition\condition.go	95;"	f	access:private	language:Go	line:95	signature:()
+main	dbSample\dbSample.go	16;"	f	access:private	language:Go	line:16	signature:()
+main	dbSample\dbSample.go	1;"	p	language:Go	line:1
+main	fileSample\fileSample.go	10;"	f	access:private	language:Go	line:10	signature:()
+main	fileSample\fileSample.go	1;"	p	language:Go	line:1
+main	hello\hello.go	1;"	p	language:Go	line:1
+main	hello\hello.go	8;"	f	access:private	language:Go	line:8	signature:()
+main	interfaceSample\interfaceSample.go	102;"	f	access:private	language:Go	line:102	signature:()
+main	interfaceSample\interfaceSample.go	1;"	p	language:Go	line:1
+main	method\method.go	1;"	p	language:Go	line:1
+main	method\method.go	70;"	f	access:private	language:Go	line:70	signature:()
+main	myServer\myServer.go	1;"	p	language:Go	line:1
+main	myServer\myServer.go	36;"	f	access:private	language:Go	line:36	signature:()
+main	ooSample\ooSample.go	1;"	p	language:Go	line:1
+main	ooSample\ooSample.go	38;"	f	access:private	language:Go	line:38	signature:()
+main	reflectSample\reflectSample.go	1;"	p	language:Go	line:1
+main	reflectSample\reflectSample.go	69;"	f	access:private	language:Go	line:69	signature:()
+main	structSample\structSample.go	1;"	p	language:Go	line:1
+main	structSample\structSample.go	43;"	f	access:private	language:Go	line:43	signature:()
+main	vardef\vardef.go	187;"	f	access:private	language:Go	line:187	signature:()
+main	vardef\vardef.go	1;"	p	language:Go	line:1
+make	structSample\structSample.go	7;"	w	access:private	ctype:vehicle	language:Go	line:7	type:string
+mangoSample	dbSample\dbSample.go	24;"	f	access:private	language:Go	line:24	signature:()
+mapDef	vardef\vardef.go	154;"	f	access:private	language:Go	line:154	signature:()
+methodExtendsSample	ooSample\ooSample.go	27;"	f	access:private	language:Go	line:27	signature:()
+model	structSample\structSample.go	15;"	w	access:private	ctype:vehicleDefine	language:Go	line:15	type:string
+model	structSample\structSample.go	9;"	w	access:private	ctype:vehicle	language:Go	line:9	type:string
+mutiReturn	method\method.go	8;"	f	access:private	language:Go	line:8	signature:(a, b int)	type:int, int
+mutiReturnWithName	method\method.go	12;"	f	access:private	language:Go	line:12	signature:(a, b int)	type:int, int
+net/http	myServer\myServer.go	5;"	i	language:Go	line:5
+newAndMake	vardef\vardef.go	183;"	f	access:private	language:Go	line:183	signature:()
+nullInterfaceSample	interfaceSample\interfaceSample.go	60;"	f	access:private	language:Go	line:60	signature:(inf NullInterface)	type:NullInterface
+os	fileSample\fileSample.go	6;"	i	language:Go	line:6
+plateNo	structSample\structSample.go	14;"	w	access:private	ctype:vehicleDefine	language:Go	line:14	type:string
+pointerFunc	method\method.go	22;"	f	access:private	language:Go	line:22	signature:(i *int)	type:int
+pubFilter	method\method.go	61;"	f	access:private	language:Go	line:61	signature:()
+recevieChanFunc	concurrentSample\concurrentSample.go	99;"	f	access:private	language:Go	line:99	signature:(c chan string)
+reflect	reflectSample\reflectSample.go	4;"	i	language:Go	line:4
+reflectSample	reflectSample\reflectSample.go	19;"	f	access:private	language:Go	line:19	signature:()
+runtime	concurrentSample\concurrentSample.go	5;"	i	language:Go	line:5
+s	vardef\vardef.go	8;"	c	access:private	language:Go	line:8
+sayHello	concurrentSample\concurrentSample.go	9;"	f	access:private	language:Go	line:9	signature:(name string)
+sayHi2u	myServer\myServer.go	17;"	f	access:private	language:Go	line:17	signature:(response http.ResponseWriter, request *http.Request)
+selectSample	concurrentSample\concurrentSample.go	106;"	f	access:private	language:Go	line:106	signature:()
+sendChanFunc	concurrentSample\concurrentSample.go	93;"	f	access:private	language:Go	line:93	signature:(c chan string)
+series	structSample\structSample.go	8;"	w	access:private	ctype:vehicle	language:Go	line:8	type:string
+setModelName	ooSample\ooSample.go	18;"	m	access:private	ctype:Vehicle	language:Go	line:18	signature:(vr Vehicle)
+sliceDef	vardef\vardef.go	109;"	f	access:private	language:Go	line:109	signature:()
+square	condition\condition.go	31;"	f	access:private	language:Go	line:31	signature:(i int)	type:int
+stringutil	stringutil\reverse.go	2;"	p	language:Go	line:2
+structSample	structSample\structSample.go	20;"	f	access:private	language:Go	line:20	signature:()
+switchSample	condition\condition.go	74;"	f	access:private	language:Go	line:74	signature:()
+synChan	concurrentSample\concurrentSample.go	67;"	f	access:private	language:Go	line:67	signature:(done chan bool)
+testInt	method\method.go	34;"	t	access:private	language:Go	line:34	type:func(int) bool
+time	concurrentSample\concurrentSample.go	6;"	i	language:Go	line:6
+time	dbSample\dbSample.go	8;"	i	language:Go	line:8
+timeOutSample	concurrentSample\concurrentSample.go	142;"	f	access:private	language:Go	line:142	signature:()
+varDefSample	vardef\vardef.go	23;"	f	access:private	language:Go	line:23	signature:()
+vehicle	structSample\structSample.go	13;"	e	access:private	ctype:vehicleDefine	language:Go	line:13	type:vehicle
+vehicle	structSample\structSample.go	6;"	t	access:private	language:Go	line:6	type:struct
+vehicleDefine	structSample\structSample.go	12;"	t	access:private	language:Go	line:12	type:struct
+xmlProcessor	fileSample\fileSample.go	68;"	f	access:private	language:Go	line:68	signature:()

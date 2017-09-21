@@ -9,7 +9,9 @@ import (
 
 func main() {
 	dirSample()
-	fileSample()
+	fileWriteSample()
+	fileReadSample()
+	fileRemoveSample()
 }
 
 func dirSample()  {
@@ -25,11 +27,11 @@ func dirSample()  {
 	os.Remove("1stDir")
 }
 
-func fileSample(){
+func fileWriteSample(){
 	//创建文件
-	file, error := os.Create("1stFile")
-	if error != nil {
-		fmt.Println(file, error)
+	file, errors := os.Create("1stFile")
+	if errors != nil {
+		fmt.Println(file, errors)
 		return
 	}
 	defer file.Close()
@@ -38,4 +40,31 @@ func fileSample(){
 	file.Write(b)
 	//直接写入string
 	file.WriteString("this is a string")
+	file.WriteAt([]byte("--insert--"),10)
+}
+
+func fileReadSample(){
+	//打开文件
+	file, error := os.Open("1stFile")
+	if error != nil {
+		fmt.Println(file, error)
+		return
+	}
+	defer file.Close()
+	buf := make([]byte, 1024)
+	for {
+		n, _ := file.Read(buf)
+		if 0 == n {
+			break
+		}
+		os.Stdout.Write(buf[:n])
+	}
+}
+
+func fileRemoveSample(){
+	os.Remove("1stFile")
+}
+
+func xmlProcessor(){
+
 }
